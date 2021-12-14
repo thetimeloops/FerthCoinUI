@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+
+
+
+<style>
+    #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: black;
+        text-align: center;
+        background-image: cyan;
+        font-weight: 700;
+        display: flex;
+        box-shadow: 9px 10px 20px #888888;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .modal {
+        float: inline-end;
+    }
+    
+    .modal-dialog {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: black;
+        text-align: center;
+        background-image: cyan;
+        font-weight: 700;
+        box-shadow: 9px 10px 20px #888888;
+        align-items: center;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+
+    <div id="content"></div>
+
+
+    <div id="wallet-section">
+        <div class="container items-center px-1 py-4 mx-auto lg:px-24">
+            <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-5xl title-font">
+                Wallets </h1>
+        </div>
+        <a href="#" id="ftc-wallet">
+            <div class="items-center px-1 py-1 text-blueGray-500 lg:px-0">
+                <div class="w-full p-2 mx-auto my-1 bg-white border rounded-lg shadow-xl lg:w-1/2">
+
+                    <div class="flex-grow p-3 py-1 rounded-lg">
+                        <p class="mb-1 text-base leading-relaxed text-blueGray-500">
+                            <img src="logo.png" height="35px" width="35px" class="flex inline-flex"> &nbsp;FTC
+                            <span class="font-semibold" style="float:right; color: green;">
+                        <!--<i class="fa fa-chevron-down" aria-hidden="true"></i>--> 99907 
+
+                    </span>
+
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </a>
+
+        <a href="#" id="rs-wallet">
+            <div class="items-center px-1 py-1 text-blueGray-500 lg:px-0">
+                <div class="w-full p-2 mx-auto my-1 bg-white border rounded-lg shadow-xl lg:w-1/2">
+
+                    <div class="flex-grow p-3 py-1 rounded-lg">
+                        <p class="mb-1 text-base leading-relaxed text-blueGray-500">
+                            <img src="https://www.freeiconspng.com/uploads/indian-rupees-symbol-png-2.png" height="25px" width="25px" class="flex inline-flex"> &nbsp;Rs
+                            <span class="font-semibold" style="float:right; color: green;">
+                        <!--<i class="fa fa-chevron-down" aria-hidden="true"></i>--> 200
+
+                    </span>
+
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="footer">
+        <div class="flex flex-col flex-wrap justify-center p-1 md:flex-row">
+            <nav class="flex flex-wrap items-center justify-center w-full mx-auto mb-1 text-base nprd">
+                <a href="main.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fas fa-home fa-lg" 
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"> </i></a>
+                <a href="about-ferth.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-exchange-alt fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"></i></a>
+                <a href="wallets.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-wallet fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;" aria-hidden="true"></i></a>
+                <a href="profile.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-user fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"></i></a>
+                <a href="#" onclick="openNav()" class=" px-2 py-1 mr-3 hover:text-black "><i class="fa fa-bars fa-lg "
+                        style="border-radius: 100%; border: 10px solid whitesmoke; " aria-hidden="true "></i>
+                    </a>
+
+            </nav>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal modal1 rounded-lg shadow-xl bg-blueGray-50 " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Pills navs -->
+                    <ul class="nav nav-pills  mb-3" id="ex1" role="tablist" style="display: flex; flex-direction: row; justify-content: center;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="ex1-tab-1" data-mdb-toggle="pill" href="#ex1-pills-1" role="tab" aria-controls="ex1-pills-1" aria-selected="true">Buy</button>
+                        </li>
+                        <li class="nav-item  float-center" role="presentation">
+                            <button class="nav-link " id="ex1-tab-2" data-mdb-toggle="pill" href="#ex1-pills-2" role="tab" aria-controls="ex1-pills-2" aria-selected="false" style="background-color: red;">Sell</button>
+                        </li>
+
+                    </ul>
+                    <!-- Pills navs --
+
+
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <!-- Pills content -->
+                    <div class="tab-content" id="ex1-content">
+                        <div class="tab-pane fade show active text-center" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                            Tab 1 content
+                        </div>
+                        <div class="tab-pane fade text-center" id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                            Tab 2 content
+                        </div>
+
+                    </div>
+                    <!-- Pills content -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div id="mySidenav " class="sidenav ">
+        <a href="javascript:void(0) " class="closebtn " onclick="closeNav() ">&times;</a>
+        <a href="about-ferth.html" class="text-black">About FerthCoin</a>
+        <a href="explorer.html" class="text-black">Network Explorer</a>
+        <a href="# " class="text-black">Contact Us</a>
+        <a href="# " class="flex flex-row  space-evenly text-black">
+            <i class="fab fa-medium-m"></i> &nbsp;
+            <i class="fab fa-instagram"></i> &nbsp;
+            <i class="fab fa-telegram-plane"></i>&nbsp;
+            <i class="fab fa-reddit-alien"></i>&nbsp;
+        </a>
+
+    </div>
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav ").style.width = "100% ";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav ").style.width = "0 ";
+
+        }
+    </script>
+    <script>
+        $("#chart-live").hide();
+        /*
+        $("#chart").click(function() {
+            $("#price-section").hide();
+            $("#chart").hide()
+            $("#chart-live").fadeIn(300);
+
+        });*/
+        $("#ftc-wallet").click(function() {
+            $('#price-section').hide();
+            $('#wallet-section').hide();
+            $('#content').load("pay.html");
+
+        });
+
+        $("#rs-wallet").click(function() {
+            $('#price-section').hide();
+            $('#wallet-section').hide();
+            $('#content').load("inrpay.html");
+
+        });
+    </script>
+
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+</html>

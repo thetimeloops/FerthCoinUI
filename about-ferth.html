@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</head>
+<script>
+    window.onload = function() {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            zoomEnabled: true,
+            title: {
+                text: ""
+            },
+            data: data
+        });
+        chart.render();
+
+    }
+
+    var limit = 1000;
+    var y = 0;
+    var data = [];
+    var dataSeries = {
+        type: "line"
+    };
+    var dataPoints = [];
+
+    for (var i = 0; i < limit; i += 1) {
+        y += (Math.random() * 10 - 5);
+        dataPoints.push({
+            x: i - limit / 2,
+            y: y
+        });
+    }
+
+
+
+    dataSeries.dataPoints = dataPoints;
+    data.push(dataSeries);
+</script>
+
+<style>
+    #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: black;
+        text-align: center;
+        background-image: cyan;
+        font-weight: 700;
+        display: flex;
+        box-shadow: 9px 10px 20px #888888;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+
+
+    <section class="text-blueGray-700">
+
+        <div class="">
+            <h1 class="mb-1 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-5xl title-font">
+                <img src="logo.png" height="50px" width="50px" class="flex inline-flex "> FerthCoin </h1>
+            <div class="flex flex-col mb-1 ">
+
+                <div class=" bg-white  rounded-lg ">
+                    <div class="w-full p-4 mx-auto lg:120">
+                        <div class="shadow-xl rounded-xl bg-blueGray-50">
+
+                            <div class="" id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="text-blueGray-700">
+
+        <div class="container px-1 py-4 mx-auto lg:px-30">
+
+            <div class="flex flex-wrap mb-1 text-left">
+
+                <div class="p-1 mx-auto bg-white  rounded-lg  lg:w-1/2">
+                    <div class="w-full p-4 mx-auto lg:8">
+                        <div class="shadow-xl rounded-xl bg-blueGray-50">
+
+                            <div class="p-4 lg:p-1 bg-blueGray-50 ">
+                                <h2 class="flex inline-flex mb-1  text-xs font-semibold tracking-widest text-black uppercase title-font">
+                                    Supply
+
+                                </h2>
+                                <h2 class="flex inline-flex mb-1 mx-5 text-center text-xs font-semibold tracking-widest text-black uppercase title-font">10000000000</h2>
+                                <hr>
+                                <h2 class="flex inline-flex mb-1 text-center text-xs font-semibold tracking-widest text-black uppercase title-font">
+                                    Holders
+
+                                </h2>
+                                <h2 class="flex inline-flex mb-1 mx-5 text-center text-xs font-semibold tracking-widest text-black uppercase title-font">4238793 </h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="p-1 mx-auto bg-white  rounded-lg  lg:w-1/2">
+                    <div class="w-full p-4 mx-auto lg:8">
+                        <div class="shadow-xl rounded-xl bg-blueGray-50">
+
+                            <div class="p-4 lg:p-10 bg-blueGray-50">
+                                <h2 class="flex inline-flex mb-1  text-xs font-semibold tracking-widest text-black uppercase title-font">
+                                    MarketCap
+
+                                </h2>
+                                <h2 class="flex inline-flex mb-1 mx-5  text-xs font-semibold tracking-widest text-black uppercase title-font">727521497</h2>
+                                <hr>
+                                <h2 class="flex inline-flex mb-1 text-center text-xs font-semibold tracking-widest text-black uppercase title-font">
+                                    Holders
+
+                                </h2>
+                                <h2 class="flex inline-flex mb-1 mx-5 text-center text-xs font-semibold tracking-widest text-black uppercase title-font">4238793 </h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <div id="footer">
+        <div class="flex flex-col flex-wrap justify-center p-1 md:flex-row">
+            <nav class="flex flex-wrap items-center justify-center w-full mx-auto mb-1 text-base nprd">
+                <a href="main.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fas fa-home fa-lg" 
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"> </i></a>
+                <a href="about-ferth.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-exchange-alt fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"></i></a>
+                <a href="wallets.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-wallet fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;" aria-hidden="true"></i></a>
+                <a href="profile.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-user fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"></i></a>
+                <a href="#" onclick="openNav()" class=" px-2 py-1 mr-3 hover:text-black "><i class="fa fa-bars fa-lg "
+                        style="border-radius: 100%; border: 10px solid whitesmoke; " aria-hidden="true "></i>
+                    </a>
+
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <div id="mySidenav " class="sidenav ">
+        <a href="javascript:void(0) " class="closebtn " onclick="closeNav() ">&times;</a>
+        <a href="about-ferth.html" class="text-black">About FerthCoin</a>
+        <a href="explorer.html" class="text-black">Network Explorer</a>
+        <a href="# " class="text-black">Contact Us</a>
+        <a href="# " class="flex flex-row  space-evenly text-black">
+            <i class="fab fa-medium-m"></i> &nbsp;
+            <i class="fab fa-instagram"></i> &nbsp;
+            <i class="fab fa-telegram-plane"></i>&nbsp;
+            <i class="fab fa-reddit-alien"></i>&nbsp;
+        </a>
+
+    </div>
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav ").style.width = "100% ";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav ").style.width = "0 ";
+
+        }
+    </script>
+    <script>
+        function myFunction() {
+            /* Get the text field */
+            var copyText = document.getElementById("myInput ");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy ");
+
+            /* Alert the copied text */
+            alert("Copied FTC Address: " + copyText.value);
+        }
+    </script>
+</body>
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js "></script>
+
+
+
+
+</html>

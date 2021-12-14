@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section class="text-blueGray-700">
+
+        <div class="container items-center px-1 py-4 mx-auto lg:px-24">
+            <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-5xl title-font">
+                Bank Details
+            </h1>
+            <div class="flex flex-row mb-1 text-left">
+
+                <div class="p-1 mx-auto bg-white  rounded-lg  lg:w-1/2" style="width: 100%;">
+                    <div class="w-full p-1 mx-auto ">
+                        <div class="shadow-xl rounded-xl bg-blueGray-50">
+
+                            <div class="flex justify-center">
+                                <form action="hello" class="flex flex-col    transition duration-500 ease-in-out transform bg-white  rounded-lg lg:w-1/2 ">
+                                    <div class="input-group flex-nowrap my-2">
+
+                                        <input type="text" class="form-control form-control-lg" placeholder="Beneficiary Name" aria-label="Username" />
+                                    </div>
+                                    <div class="input-group flex-nowrap my-2">
+
+                                        <input type="text" class="form-control form-control-lg" placeholder="Account Number " aria-label="Username" />
+                                    </div>
+                                    <div class="input-group flex-nowrap my-2">
+
+                                        <input type="text" class="form-control form-control-lg " placeholder="IFSC Code" aria-label="Username" />
+                                    </div>
+                                    <div class="input-group flex-nowrap my-2">
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                                            <label class="form-check-label" for="inlineRadio1">Savings Account</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                            <label class="form-check-label" for="inlineRadio2">Current Account</label>
+                                        </div>
+                                    </div>
+                                    <center>
+                                        <div class="flex-grow p-1 py-1 rounded-lg">
+                                            <p class="mb-3 text-base leading-relaxed text-blueGray-500">
+                                                <button type="submit" class="px-6 py-2 mx-auto mt-1 text-base font-medium text-white transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-xl items-centerw-full focus:shadow-outline  focus:outline focus:ring-2 ring-offset-current shadow-xl   ring-offset-2 hover:bg-blue-700  ">Submit</button>
+
+                                            </p>
+                                        </div>
+                                    </center>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div id="footer">
+        <div class="flex flex-col flex-wrap justify-center p-1 md:flex-row">
+            <nav class="flex flex-wrap items-center justify-center w-full mx-auto mb-1 text-base nprd">
+                <a href="main.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fas fa-home fa-lg" 
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"> </i></a>
+                <a href="about-ferth.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-exchange-alt fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"></i></a>
+                <a href="wallets.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-wallet fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;" aria-hidden="true"></i></a>
+                <a href="profile.html" class="px-2 py-1 mr-3  hover:text-black "><i class="fa fa-user fa-lg"
+                        style="border-radius: 100%; border: 10px solid whitesmoke;  " aria-hidden="true"></i></a>
+                <a href="#" onclick="openNav()" class=" px-2 py-1 mr-3 hover:text-black "><i class="fa fa-bars fa-lg "
+                        style="border-radius: 100%; border: 10px solid whitesmoke; " aria-hidden="true "></i>
+                    </a>
+
+            </nav>
+        </div>
+    </div>
+    <div id="mySidenav " class="sidenav ">
+        <a href="javascript:void(0) " class="closebtn " onclick="closeNav() ">&times;</a>
+        <a href="about-ferth.html" class="text-black">About FerthCoin</a>
+        <a href="explorer.html" class="text-black">Network Explorer</a>
+        <a href="# " class="text-black">Contact Us</a>
+        <a href="# " class="flex flex-row  space-evenly text-black">
+            <i class="fab fa-medium-m"></i> &nbsp;
+            <i class="fab fa-instagram"></i> &nbsp;
+            <i class="fab fa-telegram-plane"></i>&nbsp;
+            <i class="fab fa-reddit-alien"></i>&nbsp;
+        </a>
+
+    </div>
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav ").style.width = "100% ";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav ").style.width = "0 ";
+
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            /* Get the text field */
+            var copyText = document.getElementById("myInput");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy ");
+
+            /* Alert the copied text */
+            alert("Copied FTC Address: " + copyText.value);
+        }
+    </script>
+
+</body>
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js "></script>
+
+
+</html>
